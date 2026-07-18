@@ -56,7 +56,7 @@ function Hero() {
           <p className="eyebrow text-bone/70">Interior architecture atelier — est. 2008</p>
         </Fade>
 
-        <h1 className="mt-7 font-serif font-light leading-[0.97] serif-tight text-[clamp(3rem,9.2vw,9.4rem)]">
+        <h1 className="mt-7 font-serif font-light leading-[0.97] serif-tight text-[clamp(2.5rem,7.5vw,7.5rem)]">
           <span className="block"><Split text="The quiet" scroll={false} delay={1.05} /></span>
           <span className="block">
             <span className="italic text-clay"><Split text="architecture" scroll={false} delay={1.2} /></span>{" "}
