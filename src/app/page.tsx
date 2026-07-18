@@ -51,7 +51,7 @@ function Hero() {
         </Fade>
       </div>
 
-      <div className="hero-content absolute inset-0 flex flex-col justify-end px-[3vw] pb-[11vh] text-bone">
+      <div className="hero-content mt-10 absolute inset-0 flex flex-col justify-end px-[3vw] pb-[11vh] text-bone">
         <Fade delay={0.9} y={20}>
           <p className="eyebrow text-bone/70">Interior architecture atelier — est. 2008</p>
         </Fade>
@@ -67,7 +67,7 @@ function Hero() {
 
         <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <Fade delay={1.75} y={24}>
-            <p className="max-w-[38ch] text-lg leading-relaxed text-bone/70">
+            <p className="max-w-[32ch] text-lg leading-relaxed text-bone/70">
               An award-winning studio shaping warm-minimal homes, villas and
               workplaces — from first sketch to the final object.
             </p>
