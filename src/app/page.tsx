@@ -297,37 +297,37 @@ function Featured() {
 }
 
 /* ————————————————— philosophy ————————————————— */
-function Philosophy() {
-  const { navigate } = useApp();
-  return (
-    <section className="relative overflow-hidden text-bone">
-      <Img src={px(20703618, 2200)} alt="Curved blush arch in soft light" className="absolute inset-0 h-full" drift={16} reveal={false} />
-      <div className="absolute inset-0 bg-coal/62" />
-      <div className="relative flex min-h-[92svh] flex-col items-center justify-center px-[3vw] py-16 text-center">
-        <Fade y={16}>
-          <p className="eyebrow text-bone/60">Design philosophy</p>
-        </Fade>
-        <h2 className="mt-10 font-serif font-light leading-[1.06] text-[clamp(2.6rem,6.5vw,6.5rem)]">
-          <em><Split text="Light first." scroll={false} /></em><br />
-          <em><Split text="Material second." delay={0.12} scroll={false} /></em><br />
-          <em className="text-clay"><Split text="Silence always." delay={0.24} scroll={false} /></em>
-        </h2>
-        <Fade delay={0.25} className="mt-10 max-w-[52ch] text-lg leading-relaxed text-bone/65">
-          <p>
-            We begin every plan with the sun's path and end it by removing everything the room
-            doesn't need. What remains — proportion, texture, shadow — is the luxury.
-          </p>
-        </Fade>
-        <Fade delay={0.35}>
-          <button onClick={() => navigate("about")} data-hover className="group mt-10 inline-flex items-center gap-4 text-lg font-medium uppercase tracking-[0.3em] text-bone/80">
-            <span className="link-line">The studio's beliefs</span>
-            <span className="h-8 w-px bg-bone/40" />
-          </button>
-        </Fade>
-      </div>
-    </section>
-  );
-}
+// function Philosophy() {
+//   const { navigate } = useApp();
+//   return (
+//     <section className="relative overflow-hidden text-bone">
+//       <Img src={px(20703618, 2200)} alt="Curved blush arch in soft light" className="absolute inset-0 h-full" drift={16} reveal={false} />
+//       <div className="absolute inset-0 bg-coal/62" />
+//       <div className="relative flex min-h-[92svh] flex-col items-center justify-center px-[3vw] py-16 text-center">
+//         <Fade y={16}>
+//           <p className="eyebrow text-bone/60">Design philosophy</p>
+//         </Fade>
+//         <h2 className="mt-10 font-serif font-light leading-[1.06] text-[clamp(2.6rem,6.5vw,6.5rem)]">
+//           <em><Split text="Light first." scroll={false} /></em><br />
+//           <em><Split text="Material second." delay={0.12} scroll={false} /></em><br />
+//           <em className="text-clay"><Split text="Silence always." delay={0.24} scroll={false} /></em>
+//         </h2>
+//         <Fade delay={0.25} className="mt-10 max-w-[52ch] text-lg leading-relaxed text-bone/65">
+//           <p>
+//             We begin every plan with the sun's path and end it by removing everything the room
+//             doesn't need. What remains — proportion, texture, shadow — is the luxury.
+//           </p>
+//         </Fade>
+//         <Fade delay={0.35}>
+//           <button onClick={() => navigate("about")} data-hover className="group mt-10 inline-flex items-center gap-4 text-lg font-medium uppercase tracking-[0.3em] text-bone/80">
+//             <span className="link-line">The studio's beliefs</span>
+//             <span className="h-8 w-px bg-bone/40" />
+//           </button>
+//         </Fade>
+//       </div>
+//     </section>
+//   );
+// }
 
 /* ————————————————— capabilities ————————————————— */
 function Services() {
@@ -652,40 +652,40 @@ function Press() {
 }
 
 /* ————————————————— CTA ————————————————— */
-function Cta() {
-  const { openConsult } = useApp();
-  return (
-    <section className="relative overflow-hidden text-bone">
-      <Img src={px(15758636, 2200)} alt="Looking down a sculptural oak staircase" className="absolute inset-0 h-full" drift={18} reveal={false} />
-      <div className="absolute inset-0 bg-coal/55" />
-      <div className="relative flex min-h-[86svh] flex-col items-center justify-center px-[3vw] py-16 text-center">
-        <Fade y={16}>
-          <p className="eyebrow text-bone/60">Begin your story</p>
-        </Fade>
-        <h2 className="mt-8 font-serif font-light leading-[1.03] serif-tight text-[clamp(2.6rem,7vw,7rem)]">
-          <Split text="Every home tells a story." scroll={false} /><br />
-          <em className="text-clay"><Split text="Let’s write yours." delay={0.12} scroll={false} /></em>
-        </h2>
-        <Fade delay={0.25}>
-          <Magnet className="mt-12">
-            <button
-              onClick={openConsult}
-              data-hover
-              data-cursor="Start"
-              className="group relative overflow-hidden bg-bone px-10 py-5 text-base font-medium uppercase tracking-[0.3em] text-ink"
-            >
-              <span className="absolute inset-0 translate-y-full bg-clay transition-transform duration-500 ease-out group-hover:translate-y-0" />
-              <span className="relative z-10">Book a consultation</span>
-            </button>
-          </Magnet>
-        </Fade>
-        <Fade delay={0.35} className="mt-8 text-lg text-bone/60">
-          <p>or write to <a href={`mailto:${OFFICE.email}`} data-hover className="link-line text-bone/85">{OFFICE.email}</a></p>
-        </Fade>
-      </div>
-    </section>
-  );
-}
+// function Cta() {
+//   const { openConsult } = useApp();
+//   return (
+//     <section className="relative overflow-hidden text-bone">
+//       <Img src={px(15758636, 2200)} alt="Looking down a sculptural oak staircase" className="absolute inset-0 h-full" drift={18} reveal={false} />
+//       <div className="absolute inset-0 bg-coal/55" />
+//       <div className="relative flex min-h-[86svh] flex-col items-center justify-center px-[3vw] py-16 text-center">
+//         <Fade y={16}>
+//           <p className="eyebrow text-bone/60">Begin your story</p>
+//         </Fade>
+//         <h2 className="mt-8 font-serif font-light leading-[1.03] serif-tight text-[clamp(2.6rem,7vw,7rem)]">
+//           <Split text="Every home tells a story." scroll={false} /><br />
+//           <em className="text-clay"><Split text="Let’s write yours." delay={0.12} scroll={false} /></em>
+//         </h2>
+//         <Fade delay={0.25}>
+//           <Magnet className="mt-12">
+//             <button
+//               onClick={openConsult}
+//               data-hover
+//               data-cursor="Start"
+//               className="group relative overflow-hidden bg-bone px-10 py-5 text-base font-medium uppercase tracking-[0.3em] text-ink"
+//             >
+//               <span className="absolute inset-0 translate-y-full bg-clay transition-transform duration-500 ease-out group-hover:translate-y-0" />
+//               <span className="relative z-10">Book a consultation</span>
+//             </button>
+//           </Magnet>
+//         </Fade>
+//         <Fade delay={0.35} className="mt-8 text-lg text-bone/60">
+//           <p>or write to <a href={`mailto:${OFFICE.email}`} data-hover className="link-line text-bone/85">{OFFICE.email}</a></p>
+//         </Fade>
+//       </div>
+//     </section>
+//   );
+// }
 
 export default function Home() {
   return (
