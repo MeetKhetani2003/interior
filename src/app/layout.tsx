@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased font-sans text-coal bg-sand">
+      <body className="antialiased font-sans text-coal bg-sand overflow-x-clip w-full">
         <ClientWrapper>{children}</ClientWrapper>
       </body>
     </html>

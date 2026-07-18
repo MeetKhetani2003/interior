@@ -18,7 +18,7 @@ export default function Monogram({
 
 export function BrandLockup({ light = false, className = "" }: { light?: boolean; className?: string }) {
   return (
-    <span className={`flex items-center gap-3 scale-150 origin-left ${className}`}>
+    <span className={`flex items-center gap-3 ${className}`}>
       <Monogram className="h-7 w-7" dark={light ? "#f4eee4" : "#221d17"} accent={light ? "#b08d57" : "#9aa3a8"} />
       <span className="leading-none">
         <span className={`block text-xl font-light tracking-[0.01em] ${light ? "text-bone" : "text-ink"}`}>

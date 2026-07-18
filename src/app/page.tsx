@@ -196,7 +196,7 @@ function Featured() {
           start: "top top",
           end: () => "+=" + dist(),
           pin: true,
-          scrub: 1,
+          scrub: true,
           anticipatePin: 1,
           invalidateOnRefresh: true,
           onUpdate: (self) => {
@@ -227,7 +227,7 @@ function Featured() {
       </div>
 
       <div ref={wrap} className="relative mt-4 lg:overflow-hidden">
-        <div className="relative flex lg:h-[100svh] lg:items-center">
+        <div className="relative lg:flex lg:h-[100svh] lg:items-center">
           <div className="pointer-events-none absolute inset-x-[5vw] bottom-8 z-20 hidden lg:block">
             <div className="h-px w-full bg-ink/10">
               <div ref={prog} className="h-px origin-left scale-x-0 bg-walnut" />
@@ -693,13 +693,13 @@ export default function Home() {
       <Hero />
       <Intro />
       <Featured />
-      <Philosophy />
+      {/* <Philosophy /> */}
       <Services />
       <ProcessHome />
       <Testimonials />
       <Insta />
       <Press />
-      <Cta />
+      {/* <Cta /> */}
     </main>
   );
 }

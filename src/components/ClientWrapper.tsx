@@ -74,12 +74,12 @@ export default function ClientWrapper({ children }: { children: React.ReactNode 
       {!ready && <Loader onDone={() => setReady(true)} />}
 
       {ready && (
-        <>
+        <div className="w-full overflow-x-clip">
           <Header />
           <div key={pathname}>{children}</div>
           <Footer />
           <FloatingCTA />
-        </>
+        </div>
       )}
 
       <Lightbox src={lb.src} alt={lb.alt} />

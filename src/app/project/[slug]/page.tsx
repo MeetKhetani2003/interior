@@ -220,13 +220,13 @@ function ProjectDetail({ project }: { project: Project }) {
             <span className="hidden text-lg uppercase tracking-[0.24em] text-mink sm:block">Drag horizontally</span>
           </Fade>
         </div>
-        <div ref={roomsRef} data-lenis-prevent className="no-bar mt-12 flex snap-x snap-mandatory gap-4 overflow-x-auto px-[3vw] cursor-grab active:cursor-grabbing">
+        <div ref={roomsRef} data-lenis-prevent className="no-bar mt-12 flex gap-4 overflow-x-auto px-[3vw] cursor-grab active:cursor-grabbing">
           {[g3, g4, ...project.images].filter(Boolean).slice(0, 6).map((g, i) => (
             <button
               key={i}
               onClick={() => openLightbox(g.src, g.cap)}
               data-cursor="Open"
-              className="group relative w-[82vw] shrink-0 snap-center sm:w-[58vw] lg:w-[44vw]"
+              className="group relative w-[82vw] shrink-0 sm:w-[58vw] lg:w-[44vw]"
             >
               <div className="img-zoom grade relative aspect-[4/3] overflow-hidden bg-sand">
                   <Image src={g.src} alt={g.cap} fill className="object-cover" sizes="(max-width: 1024px) 100vw, 70vw" />
