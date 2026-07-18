@@ -233,7 +233,7 @@ function Featured() {
               <div ref={prog} className="h-px origin-left scale-x-0 bg-walnut" />
             </div>
           </div>
-          <div ref={track} className="no-bar flex w-full items-stretch gap-[7vw] overflow-x-auto px-[3vw] py-14 lg:w-auto lg:overflow-visible lg:py-0">
+          <div ref={track} className="no-bar flex w-full items-stretch gap-[7vw] overflow-x-auto px-[3vw] py-14 lg:w-auto lg:overflow-visible lg:py-0 lg:will-change-transform">
             {works.map((p, i) => (
               <article
                 key={p.slug}
@@ -246,13 +246,13 @@ function Featured() {
                   className="block h-full w-full text-left"
                 >
                   <div className={`img-zoom grade relative w-full overflow-hidden bg-sand ${i % 2 ? "h-[46vh] lg:h-[80%]" : "h-[52vh] lg:h-full"}`}>
-                    <Image src={p.poster} alt={p.title} fill priority className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
+                    <Image src={p.poster} alt={p.title} fill priority={i < 2} className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
                     {p.images && p.images[0] && (
                       <Image
                         src={typeof p.images[0] === 'string' ? p.images[0] : p.images[0].src}
                         alt=""
                         fill
-                        priority
+                        loading="lazy"
                         className="object-cover opacity-0 transition-opacity duration-700 group-hover:opacity-100"
                         sizes="(max-width: 1024px) 100vw, 50vw"
                       />

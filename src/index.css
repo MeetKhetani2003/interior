@@ -51,6 +51,7 @@ video { background: var(--color-coal); }
 
 /* lenis */
 html.lenis, html.lenis body { height: auto; }
+html.lenis.lenis-scrolling, html.lenis.lenis-scrolling * { pointer-events: none !important; }
 .lenis.lenis-smooth { scroll-behavior: auto !important; }
 .lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
 .lenis.lenis-stopped { overflow: hidden; }
