@@ -693,13 +693,13 @@ export default function Home() {
       <Hero />
       <Intro />
       <Featured />
-      {/* <Philosophy /> */}
+      <Philosophy />
       <Services />
       <ProcessHome />
       <Testimonials />
       <Insta />
       <Press />
-      {/* <Cta /> */}
+      <Cta />
     </main>
   );
 }

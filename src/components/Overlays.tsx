@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import { px, OFFICE } from "../data/content";
+import { OFFICE } from "../data/content";
 import gsap from "gsap";
 import { useApp, getLenis } from "../lib/app";
 
