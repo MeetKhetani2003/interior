@@ -1,7 +1,7 @@
 "use client";
 import { Split, Fade, Eyebrow, Img, Rule, Counter, Marquee, ScrollTrigger, useGsap, gsap } from "../../lib/anim";
 import { useApp } from "../../lib/app";
-import { TEAM, TIMELINE, PRESS, pxc, px } from "../../data/content";
+import { TEAM, TIMELINE, PRESS  } from "../../data/content";
 import { useRef } from "react";
 
 function Timeline() {
@@ -75,9 +75,9 @@ export default function About() {
             </Fade>
           </div>
           <div className="relative lg:col-span-5">
-            <Img src={pxc(6583360, 1000, 1250)} alt="Sofia Amaral, founder of ModernArt Interior" ratio="4/5" />
+            <Img src={"/newprojects/Aditya Antilia Living Room (1)/0.jpg"} alt="Sofia Amaral, founder of ModernArt Interior" ratio="4/5" />
             <Fade delay={0.3} className="absolute -bottom-10 -left-8 hidden border-8 border-bone sm:block" y={24}>
-              <img src={px(34691750, 800)} alt="Arched interior" className="h-44 w-36 object-cover" />
+              <img src={"/newprojects/Aditya Antilia Living Room (1)/0.jpg"} alt="Arched interior" className="h-44 w-36 object-cover" />
             </Fade>
           </div>
         </div>
@@ -106,7 +106,7 @@ export default function About() {
       <section className="px-[3vw] py-16 sm:py-36">
         <div className="grid items-center gap-8 lg:grid-cols-12">
           <div className="lg:col-span-6">
-            <Img src={pxc(6583344, 1100, 1300)} alt="The founder reviewing fabric samples in the studio" ratio="5/6" drift={8} />
+            <Img src={"/newprojects/Aditya Antilia Living Room (1)/0.jpg"} alt="The founder reviewing fabric samples in the studio" ratio="5/6" drift={8} />
           </div>
           <div className="lg:col-span-5 lg:col-start-8">
             <Eyebrow>The founder</Eyebrow>

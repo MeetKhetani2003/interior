@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { gsap, ScrollTrigger, useGsap, Split, Fade, Img, Counter, Eyebrow, Rule, Magnet } from "../lib/anim";
 import { useApp } from "../lib/app";
-import { FILM, PROJECTS, SERVICES, STEPS, TESTIMONIALS, INSTAGRAM, AWARDS, OFFICE, px } from "../data/content";
+import { FILM, PROJECTS, SERVICES, STEPS, TESTIMONIALS, INSTAGRAM, AWARDS, OFFICE } from "../data/content";
 
 /* ————————————————— hero ————————————————— */
 function Hero() {
@@ -22,15 +22,7 @@ function Hero() {
 
   return (
     <section ref={root} className="relative h-[100svh] overflow-hidden bg-coal">
-      <video
-        className="hero-video absolute inset-0 h-full w-full object-cover [filter:saturate(.9)_contrast(1.05)]"
-        src={FILM.hero}
-        poster={FILM.heroPoster}
-        autoPlay
-        muted
-        loop
-        playsInline
-      />
+      <img className="hero-video absolute inset-0 h-full w-full object-cover [filter:saturate(.9)_contrast(1.05)]" src={FILM.hero} alt="Hero Image" />
       <div className="absolute inset-0 bg-gradient-to-b from-coal/60 via-coal/25 to-coal/70" />
       <div className="absolute inset-0 bg-coal/10" />
 
@@ -141,10 +133,10 @@ function Intro() {
 
         <div className="relative lg:col-span-7">
           <div className="ml-auto w-[78%] sm:w-[68%]">
-            <Img src={px(5393495, 1500)} alt="Atelier work table with drawings and material rolls" ratio="4/5" />
+            <Img src={PROJECTS[0].poster} alt="Atelier work table with drawings and material rolls" ratio="4/5" />
           </div>
           <div className="absolute -bottom-14 left-0 w-[46%] border-[10px] border-bone sm:-bottom-20 sm:w-[40%]">
-            <Img src={px(34691750, 1100)} alt="Arched interior with soft light" ratio="3/4" drift={7} />
+            <Img src={PROJECTS[0].poster} alt="Arched interior with soft light" ratio="3/4" drift={7} />
             <p className="absolute -bottom-8 left-0 text-lg uppercase tracking-[0.26em] text-mink">Santos atelier — Lisboa</p>
           </div>
           <Fade delay={0.4} className="absolute -left-2 top-6 hidden md:block">
@@ -301,7 +293,7 @@ function Featured() {
 //   const { navigate } = useApp();
 //   return (
 //     <section className="relative overflow-hidden text-bone">
-//       <Img src={px(20703618, 2200)} alt="Curved blush arch in soft light" className="absolute inset-0 h-full" drift={16} reveal={false} />
+//       <Img src={PROJECTS[0].poster} alt="Curved blush arch in soft light" className="absolute inset-0 h-full" drift={16} reveal={false} />
 //       <div className="absolute inset-0 bg-coal/62" />
 //       <div className="relative flex min-h-[92svh] flex-col items-center justify-center px-[3vw] py-16 text-center">
 //         <Fade y={16}>
@@ -656,7 +648,7 @@ function Press() {
 //   const { openConsult } = useApp();
 //   return (
 //     <section className="relative overflow-hidden text-bone">
-//       <Img src={px(15758636, 2200)} alt="Looking down a sculptural oak staircase" className="absolute inset-0 h-full" drift={18} reveal={false} />
+//       <Img src={PROJECTS[0].poster} alt="Looking down a sculptural oak staircase" className="absolute inset-0 h-full" drift={18} reveal={false} />
 //       <div className="absolute inset-0 bg-coal/55" />
 //       <div className="relative flex min-h-[86svh] flex-col items-center justify-center px-[3vw] py-16 text-center">
 //         <Fade y={16}>

@@ -1,7 +1,7 @@
 "use client";
 import { Split, Fade, Eyebrow, Rule } from "../../lib/anim";
 import { useApp } from "../../lib/app";
-import { OFFICE, px } from "../../data/content";
+import { OFFICE } from "../../data/content";
 import { ConsultForm } from "../../components/Overlays";
 
 export default function Contact() {
@@ -62,9 +62,9 @@ export default function Contact() {
                 </div>
               </Fade>
               <Fade delay={0.15}>
-                <button onClick={() => openLightbox(px(5393495, 1600), "The Santos atelier — worktable")} data-cursor="Open" className="group block w-full text-left">
+                <button onClick={() => openLightbox("/newprojects/Aditya Antilia Living Room (1)/0.jpg", "The Santos atelier — worktable")} data-cursor="Open" className="group block w-full text-left">
                   <div className="img-zoom relative overflow-hidden">
-                    <img src={px(5393495, 1100)} alt="The studio atelier" loading="lazy" className="aspect-[4/3] w-full object-cover" />
+                    <img src={"/newprojects/Aditya Antilia Living Room (1)/0.jpg"} alt="The studio atelier" loading="lazy" className="aspect-[4/3] w-full object-cover" />
                   </div>
                   <p className="mt-3 text-lg uppercase tracking-[0.24em] text-mink">The Santos atelier — visits by appointment</p>
                 </button>
