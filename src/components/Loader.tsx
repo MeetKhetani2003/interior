@@ -1,7 +1,6 @@
 "use client";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
-import Monogram from "./Monogram";
 
 export default function Loader({ onDone }: { onDone: () => void }) {
   const root = useRef<HTMLDivElement>(null);
@@ -49,9 +48,9 @@ export default function Loader({ onDone }: { onDone: () => void }) {
 
       <div className="flex flex-col items-center">
         <div ref={monoWrap} className="opacity-0">
-          <Monogram className="h-16 w-16 sm:h-20 sm:w-20" />
+          <img src="/logo.png" alt="ModernArt Logo" className="h-20 sm:h-28 object-contain" />
         </div>
-        <div ref={word} className="mt-8 text-center opacity-0">
+        <div ref={word} className="mt-8 text-center opacity-0 hidden">
           <p className="font-serif text-3xl font-light tracking-[0.06em] text-ink sm:text-4xl">
             ModernArt
           </p>

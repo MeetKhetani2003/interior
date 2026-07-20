@@ -2,21 +2,21 @@
 
 @theme {
   /* ————— ModernArt Interior · palette ————— */
-  --color-bone: #f4eee4;
-  --color-paper: #faf6ee;
-  --color-ivory: #f8f3e9;
-  --color-sand: #eae1d1;
-  --color-clay: #d9ccb6;
-  --color-taupe: #a6957f;
-  --color-mink: #83735f;
-  --color-bronze: #95775b;
-  --color-gold: #b08d57;
-  --color-walnut: #5c4632;
-  --color-umber: #3b2f24;
-  --color-ink: #221d17;
-  --color-coal: #16120e;
-  --color-art: #9aa3a8;
-  --color-mist: #aeb9c0;
+  --color-bone: #ffffff;
+  --color-paper: #f7f9fa;
+  --color-ivory: #edf1f3;
+  --color-sand: #d1dde5;
+  --color-clay: #a3b4c4; /* Light blue from logo */
+  --color-taupe: #8ca3b5;
+  --color-mink: #7592a6;
+  --color-bronze: #5e8096;
+  --color-gold: #476f87;
+  --color-walnut: #3b5a6d;
+  --color-umber: #2d4452;
+  --color-ink: #202f34; /* Dark blue from logo */
+  --color-coal: #151e22;
+  --color-art: #a3b4c4;
+  --color-mist: #d1dde5;
 
   --font-serif: "Cormorant Garamond", "Times New Roman", Georgia, serif;
   --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;

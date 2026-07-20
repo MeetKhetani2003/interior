@@ -42,7 +42,7 @@ export default function Footer() {
       {/* ————— grid ————— */}
       <div className="grid gap-8 px-[3vw] py-16 lg:grid-cols-12">
         <div className="lg:col-span-4">
-          <BrandLockup light />
+          <BrandLockup />
           <p className="mt-6 max-w-[34ch] text-lg leading-relaxed text-bone/50">
             An interior architecture atelier practicing warm minimalism for homes, villas and
             workplaces — from first sketch to the final object.

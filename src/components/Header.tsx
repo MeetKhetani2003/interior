@@ -71,7 +71,7 @@ export default function Header() {
       >
         <div className="flex items-center justify-between">
           <button onClick={() => go("home")} data-hover aria-label="ModernArt Interior — home">
-            <BrandLockup light={menu || (route === "home" && !scrolled)} />
+            <BrandLockup />
           </button>
 
           <nav className="hidden items-center gap-9 xl:flex" aria-label="Primary">
