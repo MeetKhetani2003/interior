@@ -370,10 +370,10 @@ export const FAQS = [
 
 export const OFFICE = {
   address: "Rua das Flores 122 · Lisboa, Portugal",
-  email: "hello@modernart-interior.com",
+  email: "reachmodernartinterior@gmail.com",
   phone: "+351 210 347 882",
   phoneLink: "+351210347882",
-  whatsapp: "https://wa.me/919879961031",
+  whatsapp: "https://wa.me/919274516100",
   instagram: "https://instagram.com/modernart.interior",
   hours: "Mon–Fri",
   mapEmbed: "https://maps.google.com/maps?q=Lisboa&t=&z=16&ie=UTF8&iwloc=&output=embed",

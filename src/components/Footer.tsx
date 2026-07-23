@@ -42,7 +42,7 @@ export default function Footer() {
       {/* ————— grid ————— */}
       <div className="grid gap-8 px-[3vw] py-16 lg:grid-cols-12">
         <div className="lg:col-span-4">
-          <BrandLockup />
+          <BrandLockup className="invert brightness-0" />
           <p className="mt-6 max-w-[34ch] text-lg leading-relaxed text-bone/50">
             An interior architecture atelier practicing warm minimalism for homes, villas and
             workplaces — from first sketch to the final object.
@@ -68,16 +68,16 @@ export default function Footer() {
         </div>
 
         <div className="lg:col-span-3">
-          <p className="eyebrow text-bone/40">Selected work</p>
+          <p className="eyebrow text-bone/40">Locations</p>
           <ul className="mt-5 space-y-3">
-            {PROJECTS.slice(0, 5).map((p) => (
-              <li key={p.slug}>
+            {["Ahmedabad", "Gandhinagar", "Vadodara", "Surat", "Mumbai"].map((city) => (
+              <li key={city}>
                 <button
-                  onClick={() => navigate("project/" + p.slug)}
+                  onClick={() => navigate("work")}
                   data-hover
                   className="link-line text-lg text-bone/70 hover:text-bone"
                 >
-                  {p.title} <span className="text-bone/35">· {p.location.split(",")[0]}</span>
+                  {city}
                 </button>
               </li>
             ))}
@@ -117,8 +117,8 @@ export default function Footer() {
             {[
               { n: "Instagram", h: OFFICE.instagram },
               { n: "WhatsApp", h: OFFICE.whatsapp },
-              { n: "Pinterest", h: "https://pinterest.com" },
-              { n: "LinkedIn", h: "https://linkedin.com" },
+              { n: "Pinterest", h: "https://in.pinterest.com/modernartinterior/" },
+              // { n: "LinkedIn", h: "https://linkedin.com" },
             ].map((s) => (
               <a key={s.n} href={s.h} target="_blank" rel="noreferrer" data-hover className="link-line text-base uppercase tracking-[0.2em] text-bone/55 hover:text-bone">
                 {s.n}

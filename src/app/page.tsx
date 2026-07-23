@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { gsap, ScrollTrigger, useGsap, Split, Fade, Img, Counter, Eyebrow, Rule, Magnet } from "../lib/anim";
 import { useApp } from "../lib/app";
-import { FILM, PROJECTS, SERVICES, STEPS, TESTIMONIALS, INSTAGRAM, AWARDS, OFFICE } from "../data/content";
+import { FILM, PROJECTS, SERVICES, STEPS, TESTIMONIALS, INSTAGRAM, AWARDS, OFFICE, } from "../data/content";
 
 /* ————————————————— hero ————————————————— */
 function Hero() {
@@ -22,7 +22,15 @@ function Hero() {
 
   return (
     <section ref={root} className="relative h-[100svh] overflow-hidden bg-coal">
-      <img className="hero-video absolute inset-0 h-full w-full object-cover [filter:saturate(.9)_contrast(1.05)]" src={FILM.hero} alt="Hero Image" />
+      <video
+        className="hero-video absolute inset-0 h-full w-full object-cover [filter:saturate(.9)_contrast(1.05)]"
+        src={FILM.hero}
+        poster={FILM.heroPoster}
+        autoPlay
+        muted
+        loop
+        playsInline
+      />
       <div className="absolute inset-0 bg-gradient-to-b from-coal/60 via-coal/25 to-coal/70" />
       <div className="absolute inset-0 bg-coal/10" />
 
@@ -59,7 +67,7 @@ function Hero() {
 
         <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <Fade delay={1.75} y={24}>
-            <p className="max-w-[32ch] text-lg leading-relaxed text-bone/70">
+            <p className="max-w-[32 ch] text-lg leading-relaxed text-bone/70">
               An award-winning studio shaping warm-minimal homes, villas and
               workplaces — from first sketch to the final object.
             </p>
@@ -133,10 +141,10 @@ function Intro() {
 
         <div className="relative lg:col-span-7">
           <div className="ml-auto w-[78%] sm:w-[68%]">
-            <Img src={PROJECTS[0].poster} alt="Atelier work table with drawings and material rolls" ratio="4/5" />
+            <Img src="/newprojects/Aditya Antilia Living Room (1)/0.jpg" alt="Atelier work table with drawings and material rolls" ratio="4/5" />
           </div>
           <div className="absolute -bottom-14 left-0 w-[46%] border-[10px] border-bone sm:-bottom-20 sm:w-[40%]">
-            <Img src={PROJECTS[0].poster} alt="Arched interior with soft light" ratio="3/4" drift={7} />
+            <Img src="/newprojects/Aditya Antilia Living Room (1)/1.jpg" alt="Arched interior with soft light" ratio="3/4" drift={7} />
             <p className="absolute -bottom-8 left-0 text-lg uppercase tracking-[0.26em] text-mink">Santos atelier — Lisboa</p>
           </div>
           <Fade delay={0.4} className="absolute -left-2 top-6 hidden md:block">
@@ -150,10 +158,10 @@ function Intro() {
       {/* stats */}
       <div className="mt-16 grid grid-cols-2 gap-y-12 border-t border-ink/10 pt-12 lg:grid-cols-4">
         {[
-          { n: 240, suf: "+", l: "Projects delivered" },
-          { n: 16, suf: "", l: "Years of practice" },
-          { n: 18, suf: "", l: "Cities worldwide" },
-          { n: 26, suf: "", l: "International awards" },
+          { n: 900, suf: "+", l: "Projects delivered" },
+          { n: 35, suf: "", l: " Years of experties" },
+          { n: 80, suf: "+", l: "Ongoing Projects" },
+          { n: 100, suf: "%", l: "Achivement Ratio" },
         ].map((s) => (
           <Fade key={s.l} className="pr-6">
             <p className="font-serif text-5xl font-light sm:text-6xl">
@@ -293,7 +301,7 @@ function Featured() {
 //   const { navigate } = useApp();
 //   return (
 //     <section className="relative overflow-hidden text-bone">
-//       <Img src={PROJECTS[0].poster} alt="Curved blush arch in soft light" className="absolute inset-0 h-full" drift={16} reveal={false} />
+//       <Img src={px(20703618, 2200)} alt="Curved blush arch in soft light" className="absolute inset-0 h-full" drift={16} reveal={false} />
 //       <div className="absolute inset-0 bg-coal/62" />
 //       <div className="relative flex min-h-[92svh] flex-col items-center justify-center px-[3vw] py-16 text-center">
 //         <Fade y={16}>
@@ -648,7 +656,7 @@ function Press() {
 //   const { openConsult } = useApp();
 //   return (
 //     <section className="relative overflow-hidden text-bone">
-//       <Img src={PROJECTS[0].poster} alt="Looking down a sculptural oak staircase" className="absolute inset-0 h-full" drift={18} reveal={false} />
+//       <Img src={px(15758636, 2200)} alt="Looking down a sculptural oak staircase" className="absolute inset-0 h-full" drift={18} reveal={false} />
 //       <div className="absolute inset-0 bg-coal/55" />
 //       <div className="relative flex min-h-[86svh] flex-col items-center justify-center px-[3vw] py-16 text-center">
 //         <Fade y={16}>
@@ -690,7 +698,7 @@ export default function Home() {
       <ProcessHome />
       <Testimonials />
       <Insta />
-      <Press />
+      {/* <Press /> */}
       {/* <Cta /> */}
     </main>
   );
