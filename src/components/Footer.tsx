@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useApp, getLenis } from "../lib/app";
 import { BrandLockup } from "./Monogram";
 import { Marquee, Fade, Rule, Split } from "../lib/anim";
-import { OFFICE, PRESS, PROJECTS } from "../data/content";
+import { OFFICE, PRESS } from "../data/content";
 
 export default function Footer() {
   const { navigate, openConsult } = useApp();
@@ -73,7 +73,9 @@ export default function Footer() {
             {["Ahmedabad", "Gandhinagar", "Vadodara", "Surat", "Mumbai"].map((city) => (
               <li key={city}>
                 <button
-                  onClick={() => navigate("work")}
+                  onClick={() => {
+                    window.location.href = `/projects?location=${city}`;
+                  }}
                   data-hover
                   className="link-line text-lg text-bone/70 hover:text-bone"
                 >

@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { gsap, ScrollTrigger, useGsap, Split, Fade, Img, Counter, Eyebrow, Rule, Magnet } from "../lib/anim";
 import { useApp } from "../lib/app";
-import { FILM, PROJECTS, SERVICES, STEPS, TESTIMONIALS, INSTAGRAM, AWARDS, OFFICE, } from "../data/content";
+import { FILM, PROJECTS, SERVICES, STEPS, TESTIMONIALS, INSTAGRAM, OFFICE, } from "../data/content";
 
 /* ————————————————— hero ————————————————— */
 function Hero() {
@@ -616,40 +616,40 @@ function Insta() {
 }
 
 /* ————————————————— awards & press ————————————————— */
-function Press() {
-  return (
-    <section className="px-[3vw] py-16 sm:py-36">
-      <div className="grid gap-8 lg:grid-cols-12">
-        <div className="lg:col-span-5">
-          <Eyebrow>Awards & press</Eyebrow>
-          <h2 className="mt-7 font-serif font-light leading-[1.06] serif-tight text-[clamp(2rem,4vw,3.8rem)]">
-            <Split text="Quietly recognised," /><br />
-            <em className="text-bronze"><Split text="internationally." delay={0.1} /></em>
-          </h2>
-          <Fade delay={0.15} className="mt-8 max-w-[44ch] text-lg leading-relaxed text-mink">
-            <p>
-              The studio's rooms have been published and shortlisted across three continents —
-              always for the same reason: they are calm, and they stay calm.
-            </p>
-          </Fade>
-        </div>
-        <div className="lg:col-span-7">
-          {AWARDS.map((a, i) => (
-            <Fade key={a.t} delay={i * 0.04}>
-              <div className="group flex items-baseline justify-between gap-6 border-t border-ink/10 py-5 transition-colors last:border-b hover:bg-paper/70">
-                <span className="w-14 shrink-0 font-serif text-lg text-taupe">{a.y}</span>
-                <span className="flex-1">
-                  <span className="block font-serif text-2xl font-light transition-transform duration-500 group-hover:translate-x-2">{a.t}</span>
-                  <span className="text-base uppercase tracking-[0.2em] text-mink">{a.s}</span>
-                </span>
-              </div>
-            </Fade>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
+// function Press() {
+//   return (
+//     <section className="px-[3vw] py-16 sm:py-36">
+//       <div className="grid gap-8 lg:grid-cols-12">
+//         <div className="lg:col-span-5">
+//           <Eyebrow>Awards & press</Eyebrow>
+//           <h2 className="mt-7 font-serif font-light leading-[1.06] serif-tight text-[clamp(2rem,4vw,3.8rem)]">
+//             <Split text="Quietly recognised," /><br />
+//             <em className="text-bronze"><Split text="internationally." delay={0.1} /></em>
+//           </h2>
+//           <Fade delay={0.15} className="mt-8 max-w-[44ch] text-lg leading-relaxed text-mink">
+//             <p>
+//               The studio's rooms have been published and shortlisted across three continents —
+//               always for the same reason: they are calm, and they stay calm.
+//             </p>
+//           </Fade>
+//         </div>
+//         <div className="lg:col-span-7">
+//           {AWARDS.map((a, i) => (
+//             <Fade key={a.t} delay={i * 0.04}>
+//               <div className="group flex items-baseline justify-between gap-6 border-t border-ink/10 py-5 transition-colors last:border-b hover:bg-paper/70">
+//                 <span className="w-14 shrink-0 font-serif text-lg text-taupe">{a.y}</span>
+//                 <span className="flex-1">
+//                   <span className="block font-serif text-2xl font-light transition-transform duration-500 group-hover:translate-x-2">{a.t}</span>
+//                   <span className="text-base uppercase tracking-[0.2em] text-mink">{a.s}</span>
+//                 </span>
+//               </div>
+//             </Fade>
+//           ))}
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
 
 /* ————————————————— CTA ————————————————— */
 // function Cta() {

@@ -75,10 +75,10 @@ export default function ClientWrapper({ children }: { children: React.ReactNode 
 
       {ready && (
         <div className="w-full overflow-x-clip">
-          <Header />
+          {!pathname.startsWith('/admin') && <Header />}
           <div key={pathname}>{children}</div>
-          <Footer />
-          <FloatingCTA />
+          {!pathname.startsWith('/admin') && <Footer />}
+          {!pathname.startsWith('/admin') && <FloatingCTA />}
         </div>
       )}
 

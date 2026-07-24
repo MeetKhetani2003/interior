@@ -3,7 +3,7 @@ import { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 import { Split, Fade, Eyebrow, Img, Rule, Marquee } from "../../../lib/anim";
 import { useApp } from "../../../lib/app";
-import { PROJECTS, type Project } from "../../../data/content";
+import { type Project } from "../../../data/content";
 
 function VideoWalk({ p }: { p: Project }) {
   const [play, setPlay] = useState(false);
@@ -44,23 +44,35 @@ function VideoWalk({ p }: { p: Project }) {
 }
 
 import { use } from "react";
-import { notFound } from "next/navigation";
 
 export default function ProjectPage({ params }: { params: Promise<{ slug: string }> }) {
   const resolvedParams = use(params);
-  const project = PROJECTS.find((p) => p.slug === resolvedParams.slug);
-  if (!project) return notFound();
+  const [data, setData] = useState<{project: any, next: any, related: any[]} | null>(null);
+  const [loading, setLoading] = useState(true);
 
-  return <ProjectDetail project={project} />;
+  useEffect(() => {
+    fetch(`/api/projects/slug/${resolvedParams.slug}`)
+      .then(res => {
+         if (!res.ok) throw new Error('Not found');
+         return res.json();
+      })
+      .then(d => {
+         setData(d);
+         setLoading(false);
+      })
+      .catch(() => setLoading(false));
+  }, [resolvedParams.slug]);
+
+  if (loading) return <div className="min-h-screen bg-coal flex items-center justify-center text-bone">Loading...</div>;
+  if (!data || !data.project) return <div className="min-h-screen bg-coal flex items-center justify-center text-bone">Project not found</div>;
+
+  return <ProjectDetail project={data.project} next={data.next} related={data.related} />;
 }
 
-function ProjectDetail({ project }: { project: Project }) {
+function ProjectDetail({ project, next, related }: { project: any, next: any, related: any[] }) {
   const { navigate, openLightbox } = useApp();
   const roomsRef = useRef<HTMLDivElement>(null);
-  const idx = PROJECTS.findIndex((x) => x.slug === project.slug);
-  const next = PROJECTS[(idx + 1) % PROJECTS.length];
-  const related = PROJECTS.filter((x) => x.slug !== project.slug).slice(idx % 3 === 0 ? 2 : 1, (idx % 3 === 0 ? 2 : 1) + 2);
-  const [g0, g1, g2, g3, g4] = project.images;
+  const [g0, g1, g2, g3, g4] = project.images || [];
 
   useEffect(() => {
     const el = roomsRef.current;
@@ -165,14 +177,14 @@ function ProjectDetail({ project }: { project: Project }) {
             </div>
           </div>
           <div className="lg:col-span-7 lg:col-start-6">
-            {project.description.map((d, i) => (
+            {project.description.map((d: string, i: number) => (
               <Fade key={i} delay={i * 0.08} className="mb-8 max-w-[62ch] text-xl leading-[1.85] text-ink/80">
                 <p>{d}</p>
               </Fade>
             ))}
             <Fade delay={0.16} className="mt-12">
               <div className="flex flex-wrap gap-3">
-                {project.materials.map((m) => (
+                {project.materials.map((m: string) => (
                   <span key={m} className="border border-ink/15 px-4 py-2 text-lg uppercase tracking-[0.22em] text-mink">
                     {m}
                   </span>
@@ -221,7 +233,7 @@ function ProjectDetail({ project }: { project: Project }) {
           </Fade>
         </div>
         <div ref={roomsRef} data-lenis-prevent className="no-bar mt-12 flex gap-4 overflow-x-auto px-[3vw] cursor-grab active:cursor-grabbing">
-          {[g3, g4, ...project.images].filter(Boolean).slice(0, 6).map((g, i) => (
+          {[g3, g4, ...project.images].filter(Boolean).slice(0, 6).map((g: any, i: number) => (
             <button
               key={i}
               onClick={() => openLightbox(g.src, g.cap)}
@@ -240,7 +252,7 @@ function ProjectDetail({ project }: { project: Project }) {
         </div>
       </section>
 
-      <VideoWalk p={project} />
+      {project.video && <VideoWalk p={project} />}
 
       {/* ————— material palette & furniture ————— */}
       <section className="border-t border-ink/10 px-[3vw] py-16">
@@ -249,7 +261,7 @@ function ProjectDetail({ project }: { project: Project }) {
             <Eyebrow>Material palette</Eyebrow>
             <h3 className="mt-6 font-serif text-4xl font-light serif-tight">What the house is made of</h3>
             <div className="mt-10 space-y-4">
-              {project.mood.map((m, i) => (
+              {project.mood.map((m: any, i: number) => (
                 <Fade key={m.name} delay={i * 0.05} className="flex items-center gap-5 border-b border-ink/10 pb-4">
                   <span className="h-10 w-10 rounded-full border border-ink/10" style={{ background: m.tone }} />
                   <span className="flex-1 font-serif text-xl font-light">{m.name}</span>
@@ -262,7 +274,7 @@ function ProjectDetail({ project }: { project: Project }) {
             <Eyebrow>Furniture schedule — edit</Eyebrow>
             <h3 className="mt-6 font-serif text-4xl font-light serif-tight">Key pieces</h3>
             <div className="mt-10">
-              {project.furniture.map((f, i) => (
+              {project.furniture.map((f: any, i: number) => (
                 <Fade key={f.piece} delay={i * 0.05} className="grid grid-cols-12 items-baseline gap-3 border-b border-ink/10 py-5">
                   <span className="col-span-1 font-serif text-clay">{String(i + 1).padStart(2, "0")}</span>
                   <span className="col-span-6 font-serif text-xl font-light leading-snug sm:col-span-5">{f.piece}</span>
@@ -289,7 +301,7 @@ function ProjectDetail({ project }: { project: Project }) {
           </Fade>
         </div>
         <div className="mt-12 grid gap-6 sm:grid-cols-2">
-          {related.map((r) => (
+          {related.map((r: any) => (
             <Fade key={r.slug}>
               <button onClick={() => navigate("project/" + r.slug)} data-cursor="View" className="group block w-full text-left">
                 <div className="img-zoom grade relative aspect-[16/10] overflow-hidden bg-sand">
@@ -326,7 +338,7 @@ function ProjectDetail({ project }: { project: Project }) {
       {/* ————— marquee strip ————— */}
       <div className="border-y border-ink/10 bg-bone py-5">
         <Marquee duration={36}>
-          {[project.title, project.location, ...project.materials, project.tagline].map((t, i) => (
+          {[project.title, project.location, ...project.materials, project.tagline].map((t: string, i: number) => (
             <span key={i} className="mx-8 flex items-center gap-4 font-serif text-xl font-light italic text-ink/45">
               {t} <span className="inline-block h-1 w-1 rounded-full bg-bronze/60" />
             </span>

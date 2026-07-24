@@ -1,5 +1,7 @@
 import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
+import connectToDatabase from '@/lib/db';
+import Inquiry from '@/lib/models/Inquiry';
 
 export async function POST(req: Request) {
   try {
@@ -9,6 +11,9 @@ export async function POST(req: Request) {
     if (!name || !email || !message) {
       return NextResponse.json({ error: 'Name, email, and message are required' }, { status: 400 });
     }
+
+    await connectToDatabase();
+    await Inquiry.create(data);
 
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
