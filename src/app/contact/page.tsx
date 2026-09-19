@@ -9,7 +9,7 @@ export default function Contact() {
   return (
     <main>
       <section className="px-[3vw] pb-16 pt-40 sm:pt-48">
-        <Eyebrow>Contact — Lisboa atelier</Eyebrow>
+        <Eyebrow>Contact — Ahmedabad atelier</Eyebrow>
         <h1 className="mt-8 max-w-5xl font-serif font-light leading-[1.0] serif-tight text-[clamp(2.8rem,7.5vw,7.5rem)]">
           <Split text="Start a" scroll={false} delay={0.15} />{" "}
           <em className="text-bronze"><Split text="conversation." scroll={false} delay={0.3} /></em>
@@ -62,11 +62,11 @@ export default function Contact() {
                 </div>
               </Fade>
               <Fade delay={0.15}>
-                <button onClick={() => openLightbox("/newprojects/Aditya Antilia Living Room (1)/0.jpg", "The Santos atelier — worktable")} data-cursor="Open" className="group block w-full text-left">
+                <button onClick={() => openLightbox("/newprojects/Aditya Antilia Living Room (1)/0.jpg", "The Ahmedabad atelier — worktable")} data-cursor="Open" className="group block w-full text-left">
                   <div className="img-zoom relative overflow-hidden">
                     <img src={"/newprojects/Aditya Antilia Living Room (1)/0.jpg"} alt="The studio atelier" loading="lazy" className="aspect-[4/3] w-full object-cover" />
                   </div>
-                  <p className="mt-3 text-lg uppercase tracking-[0.24em] text-mink">The Santos atelier — visits by appointment</p>
+                  <p className="mt-3 text-lg uppercase tracking-[0.24em] text-mink">The Ahmedabad atelier — visits by appointment</p>
                 </button>
               </Fade>
             </div>
@@ -76,11 +76,11 @@ export default function Contact() {
 
       {/* map */}
       <section className="map-frame relative h-[460px] border-t border-ink/10">
-        <iframe title="ModernArt Interior — Lisboa" src={OFFICE.mapEmbed} loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
+        <iframe title="ModernArt Interior — Ahmedabad" src={OFFICE.mapEmbed} loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-bone/30 to-transparent" />
         <div className="absolute bottom-8 left-[5vw] bg-bone px-6 py-5 shadow-[0_20px_60px_rgb(34_29_23/0.15)]">
           <p className="eyebrow text-bronze">Find us</p>
-          <p className="mt-2 font-serif text-lg font-light">Rua das Flores 122 — Chiado, Lisboa</p>
+          <p className="mt-2 font-serif text-lg font-light">{OFFICE.address}</p>
         </div>
       </section>
     </main>

@@ -565,14 +565,14 @@ export const FAQS = [
 
 export const OFFICE = {
   address: "Experience Center, Ozone Solitaire, 209, Science City Rd, opp. Hetarth Party Plot, Sola, Ahmedabad, Gujarat 380060.",
-  branches: "Ahmedabad, Vadodara, Surat, Mumbai, Gandhinagar.",
+  branches: "Ahmedabad-Gandhinagar | Mumbai | Surat | Vadodara",
   email: "reachmodernartinterior@gmail.com",
-  phone: "+351 210 347 882",
-  phoneLink: "+351210347882",
+  phone: "+91 92745 16100",
+  phoneLink: "+919274516100",
   whatsapp: "https://wa.me/919274516100",
   instagram: "https://www.instagram.com/modernart_interior",
   hours: "Mon–Fri",
-  mapEmbed: "https://maps.google.com/maps?q=Lisboa&t=&z=16&ie=UTF8&iwloc=&output=embed",
+  mapEmbed: "https://maps.google.com/maps?q=Ozone+Solitaire,+Science+City+Rd,+Sola,+Ahmedabad&t=&z=16&ie=UTF8&iwloc=&output=embed",
 };
 
 export const FILM = {

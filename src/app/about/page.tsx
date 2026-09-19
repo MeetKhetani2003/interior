@@ -67,11 +67,12 @@ export default function About() {
               <em className="text-bronze"><Split text="warm restraint." scroll={false} delay={0.3} /></em>
             </h1>
             <Fade delay={0.35} className="mt-10 max-w-[48ch] text-xl leading-[1.85] text-mink">
-              <p>
-                Founded in 2008 by Sofia Amaral, ModernArt Interior is a twenty-three-person
-                atelier of architects, joiners, stylists and one very opinionated material
-                library. We believe luxury is a temperature, not a price.
-              </p>
+              <ul className="space-y-3">
+                <li>🏡 Trusted Interior Design & Execution</li>
+                <li>✨ 35+ Years of Expertise</li>
+                <li>📐 900+ Projects Delivered | 80+ Ongoing</li>
+                <li>📍 Ahmedabad-Gandhinagar | Mumbai | Surat | Vadodara</li>
+              </ul>
             </Fade>
           </div>
           <div className="relative lg:col-span-5">
@@ -87,10 +88,10 @@ export default function About() {
       <section className="border-y border-ink/10 px-[3vw] py-16">
         <div className="grid grid-cols-2 gap-y-10 lg:grid-cols-4">
           {[
-            { n: 23, s: "", l: "Hands in the atelier" },
-            { n: 6, s: "", l: "Commissions per year" },
-            { n: 240, s: "+", l: "Projects since 2008" },
-            { n: 94, s: "%", l: "Clients who return" },
+            { n: 35, s: "+", l: "Years of Expertise" },
+            { n: 900, s: "+", l: "Projects Delivered" },
+            { n: 80, s: "+", l: "Ongoing Projects" },
+            { n: 4, s: "", l: "Major Cities" },
           ].map((s) => (
             <Fade key={s.l}>
               <p className="font-serif text-5xl font-light">
