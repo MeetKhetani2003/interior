@@ -42,8 +42,8 @@ export default function Loader({ onDone }: { onDone: () => void }) {
   return (
     <div ref={root} className="fixed inset-0 z-[250] flex flex-col justify-between bg-bone px-[3vw] py-10">
       <div className="flex items-center justify-between">
-        <span className="eyebrow text-mink">Atelier of Warm Minimalism</span>
-        <span className="eyebrow hidden text-mink sm:block">Lisboa · Dubai · Milan</span>
+        <span className="eyebrow text-mink">Studio of Warm Minimalism</span>
+        <span className="eyebrow hidden text-mink sm:block">Ahmedabad · Mumbai · Surat · Vadodara</span>
       </div>
 
       <div className="flex flex-col items-center">
@@ -61,7 +61,7 @@ export default function Loader({ onDone }: { onDone: () => void }) {
       <div className="flex items-end justify-between">
         <div className="w-40 sm:w-64">
           <div ref={bar} className="h-px origin-left scale-x-0 bg-ink/60" />
-          <p className="eyebrow mt-4 text-mink">Composing the atelier</p>
+          <p className="eyebrow mt-4 text-mink">Composing the studio</p>
         </div>
         <span ref={count} className="font-serif text-6xl font-light leading-none text-ink/80 sm:text-8xl">
           000

@@ -113,7 +113,7 @@ export default function Process() {
         </h2>
         <Fade delay={0.2} className="mx-auto mt-8 max-w-[52ch] text-lg leading-[1.9] text-mink">
           <p>
-            Scarcity is not a sales posture — it is a quality mechanism. When the atelier is
+            Scarcity is not a sales posture — it is a quality mechanism. When the studio is
             full, the answer is a date, not a shortcut.
           </p>
         </Fade>

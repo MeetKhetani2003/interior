@@ -30,7 +30,7 @@ function Timeline() {
             <Eyebrow>Eighteen years</Eyebrow>
             <h2 className="mt-7 font-serif font-light leading-[1.06] serif-tight text-[clamp(2.2rem,4.4vw,4.2rem)]">
               <Split text="A slow-growing" /><br />
-              <em className="text-bronze"><Split text="atelier." delay={0.1} /></em>
+              <em className="text-bronze"><Split text="studio." delay={0.1} /></em>
             </h2>
           </div>
         </div>
@@ -61,9 +61,9 @@ export default function About() {
       <section className="relative px-[3vw] pb-24 pt-40 sm:pt-48">
         <div className="grid gap-8 lg:grid-cols-12">
           <div className="lg:col-span-7">
-            <Eyebrow>The studio — Lisboa</Eyebrow>
+            <Eyebrow>The studio — Ahmedabad</Eyebrow>
             <h1 className="mt-8 font-serif font-light leading-[1.0] serif-tight text-[clamp(2.8rem,7vw,7rem)]">
-              <Split text="An atelier of" scroll={false} delay={0.15} /><br />
+              <Split text="A studio of" scroll={false} delay={0.15} /><br />
               <em className="text-bronze"><Split text="warm restraint." scroll={false} delay={0.3} /></em>
             </h1>
             <Fade delay={0.35} className="mt-10 max-w-[48ch] text-xl leading-[1.85] text-mink">
@@ -121,13 +121,13 @@ export default function About() {
             </Fade>
             <Fade delay={0.15} className="mt-8 space-y-4 text-lg leading-[1.85] text-mink">
               <p>
-                Trained as an architect in Porto and formed in Antwerp, Sofia began the studio
+                Trained as an interior designer in India, Sofia began the studio
                 with a single rented desk and a refusal: no room that photographs loudly and
                 lives badly.
               </p>
               <p>
                 She still reviews every material sample personally — usually against the
-                north light of the Rua das Flores window, always after 6 p.m.
+                north light of the studio window, always after 6 p.m.
               </p>
             </Fade>
             <Fade delay={0.2}>

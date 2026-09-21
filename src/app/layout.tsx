@@ -5,9 +5,9 @@ import ClientWrapper from "../components/ClientWrapper";
 export const metadata: Metadata = {
   title: {
     template: "%s — ModernArt Interior",
-    default: "ModernArt Interior — Atelier of Warm Minimalism · Lisbon",
+    default: "ModernArt Interior — Studio of Warm Minimalism · Ahmedabad",
   },
-  description: "Luxury interior design based in Lisbon, Portugal.",
+  description: "Luxury interior design based in Ahmedabad, India.",
 };
 
 export default function RootLayout({

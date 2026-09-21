@@ -100,7 +100,7 @@ export const PROJECTS = [
     ],
     materials: ["Wood", "Stone", "Fabric"],
     furniture: [
-      { piece: "Custom Furniture", maker: "Atelier", room: "Main" }
+      { piece: "Custom Furniture", maker: "Studio", room: "Main" }
     ]
   },
   {
@@ -129,7 +129,7 @@ export const PROJECTS = [
     ],
     materials: ["Wood", "Stone", "Fabric"],
     furniture: [
-      { piece: "Custom Furniture", maker: "Atelier", room: "Main" }
+      { piece: "Custom Furniture", maker: "Studio", room: "Main" }
     ]
   },
   {
@@ -159,7 +159,7 @@ export const PROJECTS = [
     ],
     materials: ["Wood", "Stone", "Fabric"],
     furniture: [
-      { piece: "Custom Furniture", maker: "Atelier", room: "Main" }
+      { piece: "Custom Furniture", maker: "Studio", room: "Main" }
     ]
   },
   {
@@ -193,7 +193,7 @@ export const PROJECTS = [
     ],
     materials: ["Wood", "Stone", "Fabric"],
     furniture: [
-      { piece: "Custom Furniture", maker: "Atelier", room: "Main" }
+      { piece: "Custom Furniture", maker: "Studio", room: "Main" }
     ]
   },
   {
@@ -227,7 +227,7 @@ export const PROJECTS = [
     ],
     materials: ["Wood", "Stone", "Fabric"],
     furniture: [
-      { piece: "Custom Furniture", maker: "Atelier", room: "Main" }
+      { piece: "Custom Furniture", maker: "Studio", room: "Main" }
     ]
   },
   {
@@ -256,7 +256,7 @@ export const PROJECTS = [
     ],
     materials: ["Wood", "Stone", "Fabric"],
     furniture: [
-      { piece: "Custom Furniture", maker: "Atelier", room: "Main" }
+      { piece: "Custom Furniture", maker: "Studio", room: "Main" }
     ]
   },
   {
@@ -300,7 +300,7 @@ export const PROJECTS = [
     ],
     materials: ["Wood", "Stone", "Fabric"],
     furniture: [
-      { piece: "Custom Furniture", maker: "Atelier", room: "Main" }
+      { piece: "Custom Furniture", maker: "Studio", room: "Main" }
     ]
   },
   {
@@ -330,7 +330,7 @@ export const PROJECTS = [
     ],
     materials: ["Wood", "Stone", "Fabric"],
     furniture: [
-      { piece: "Custom Furniture", maker: "Atelier", room: "Main" }
+      { piece: "Custom Furniture", maker: "Studio", room: "Main" }
     ]
   },
   {
@@ -371,7 +371,7 @@ export const PROJECTS = [
     ],
     materials: ["Wood", "Stone", "Fabric"],
     furniture: [
-      { piece: "Custom Furniture", maker: "Atelier", room: "Main" }
+      { piece: "Custom Furniture", maker: "Studio", room: "Main" }
     ]
   }
 ];
@@ -432,7 +432,7 @@ export const SERVICES = [
   {
     n: "07", slug: "furniture", title: "Furniture & Styling",
     short: "The last five percent, which is everything",
-    body: "Furniture curation, custom pieces from our atelier, art placement and the final styling pass.",
+    body: "Furniture curation, custom pieces from our studio, art placement and the final styling pass.",
     points: ["FF&E specification", "Custom pieces", "Art consultancy", "Final styling"],
     src: "/newprojects/Aditya Antilia Semi-Master bedroom (1)/2.jpg",
   },
@@ -543,7 +543,7 @@ export const TEAM = [
 ];
 
 export const TIMELINE = [
-  { y: "2008", t: "A two-desk studio", d: "Founded in Lisbon." },
+  { y: "2008", t: "A two-desk studio", d: "Founded in Ahmedabad." },
   { y: "2026", t: "Quiet Rooms", d: "Eighteen years of work." },
 ];
 

@@ -53,7 +53,7 @@ function Hero() {
 
       <div className="hero-content mt-10 absolute inset-0 flex flex-col justify-end px-[3vw] pb-[11vh] text-bone">
         <Fade delay={0.9} y={20}>
-          <p className="eyebrow text-bone/70">Interior architecture atelier — est. 2008</p>
+          <p className="eyebrow text-bone/70">Interior architecture studio — est. 2008</p>
         </Fade>
 
         <h1 className="mt-7 font-serif font-light leading-[0.97] serif-tight text-[clamp(2.5rem,7.5vw,7.5rem)]">
@@ -112,14 +112,14 @@ function Intro() {
     <section className="relative px-[3vw] py-16 sm:py-40">
       <div className="grid gap-8 lg:grid-cols-12">
         <div className="lg:col-span-5">
-          <Eyebrow>The Atelier</Eyebrow>
+          <Eyebrow>The Studio</Eyebrow>
           <h2 className="mt-8 font-serif font-light leading-[1.04] serif-tight text-[clamp(2.2rem,4.6vw,4.4rem)]">
             <Split text="Rooms that hold" /><br />
             <em className="text-bronze"><Split text="a life well lived." delay={0.1} /></em>
           </h2>
           <Fade className="mt-10 max-w-[52ch] space-y-5 text-xl leading-relaxed text-mink" delay={0.15}>
             <p>
-              ModernArt Interior is a Lisbon atelier practicing warm minimalism — rooms built
+              ModernArt Interior is an Ahmedabad studio practicing warm minimalism — rooms built
               from light, proportion and honest material rather than decoration. We take six
               commissions a year, and give each one senior hands and slow attention.
             </p>
@@ -140,8 +140,13 @@ function Intro() {
         </div>
 
         <div className="relative lg:col-span-7">
-          <div className="ml-auto w-[78%] sm:w-[68%]">
-            <Img src="/newprojects/Aditya Antilia Living Room (1)/0.jpg" alt="Atelier work table with drawings and material rolls" ratio="4/5" />
+          <div className="ml-auto w-[78%] sm:w-[68%] group relative">
+            <Img src="/newprojects/Aditya Antilia Living Room (1)/0.jpg" alt="Studio work table with drawings and material rolls" ratio="4/5" />
+            <div className="absolute inset-0 bg-ink/10 transition-colors group-hover:bg-transparent" />
+            <div className="absolute bottom-6 right-6 flex h-14 w-14 items-center justify-center rounded-full bg-bone text-ink opacity-0 transition-all duration-500 group-hover:opacity-100 sm:bottom-10 sm:right-10">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+            <p className="absolute -bottom-8 left-0 text-lg uppercase tracking-[0.26em] text-mink">Ahmedabad studio</p>
           </div>
           <div className="absolute -bottom-14 left-0 w-[46%] border-[10px] border-bone sm:-bottom-20 sm:w-[40%]">
             <Img src="/newprojects/Aditya Antilia Living Room (1)/1.jpg" alt="Arched interior with soft light" ratio="3/4" drift={7} />

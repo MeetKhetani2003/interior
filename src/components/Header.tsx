@@ -157,7 +157,7 @@ export default function Header() {
 
         <div className="grid gap-6 pt-10 sm:grid-cols-3">
           <div className="menu-meta">
-            <p className="eyebrow text-bone/40">Atelier</p>
+            <p className="eyebrow text-bone/40">Studio</p>
             <p className="mt-3 max-w-[26ch] text-lg leading-relaxed text-bone/70">{OFFICE.address}</p>
           </div>
           <div className="menu-meta">

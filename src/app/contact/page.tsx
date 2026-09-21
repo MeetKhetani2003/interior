@@ -9,7 +9,7 @@ export default function Contact() {
   return (
     <main>
       <section className="px-[3vw] pb-16 pt-40 sm:pt-48">
-        <Eyebrow>Contact — Ahmedabad atelier</Eyebrow>
+        <Eyebrow>Contact — Ahmedabad studio</Eyebrow>
         <h1 className="mt-8 max-w-5xl font-serif font-light leading-[1.0] serif-tight text-[clamp(2.8rem,7.5vw,7.5rem)]">
           <Split text="Start a" scroll={false} delay={0.15} />{" "}
           <em className="text-bronze"><Split text="conversation." scroll={false} delay={0.3} /></em>
@@ -40,7 +40,7 @@ export default function Contact() {
             <div className="space-y-10">
               <Fade>
                 <div>
-                  <p className="eyebrow text-mink">Atelier</p>
+                  <p className="eyebrow text-mink">Studio</p>
                   <p className="mt-3 max-w-[30ch] font-serif text-xl font-light leading-snug">{OFFICE.address}</p>
                   <p className="mt-2 text-base text-mink">{OFFICE.hours}</p>
                 </div>
@@ -62,11 +62,11 @@ export default function Contact() {
                 </div>
               </Fade>
               <Fade delay={0.15}>
-                <button onClick={() => openLightbox("/newprojects/Aditya Antilia Living Room (1)/0.jpg", "The Ahmedabad atelier — worktable")} data-cursor="Open" className="group block w-full text-left">
+                <button onClick={() => openLightbox("/newprojects/Aditya Antilia Living Room (1)/0.jpg", "The Ahmedabad studio — worktable")} data-cursor="Open" className="group block w-full text-left">
                   <div className="img-zoom relative overflow-hidden">
-                    <img src={"/newprojects/Aditya Antilia Living Room (1)/0.jpg"} alt="The studio atelier" loading="lazy" className="aspect-[4/3] w-full object-cover" />
+                    <img src={"/newprojects/Aditya Antilia Living Room (1)/0.jpg"} alt="The studio" loading="lazy" className="aspect-[4/3] w-full object-cover" />
                   </div>
-                  <p className="mt-3 text-lg uppercase tracking-[0.24em] text-mink">The Ahmedabad atelier — visits by appointment</p>
+                  <p className="mt-3 text-lg uppercase tracking-[0.24em] text-mink">The Ahmedabad studio — visits by appointment</p>
                 </button>
               </Fade>
             </div>

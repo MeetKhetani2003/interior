@@ -44,10 +44,10 @@ export default function Footer() {
         <div className="lg:col-span-4">
           <BrandLockup className="invert brightness-0" />
           <p className="mt-6 max-w-[34ch] text-lg leading-relaxed text-bone/50">
-            An interior architecture atelier practicing warm minimalism for homes, villas and
+            An interior architecture studio practicing warm minimalism for homes, villas and
             workplaces — from first sketch to the final object.
           </p>
-          <p className="eyebrow mt-8 text-bone/30">Est. 2008 · Lisboa — Dubai — Milan</p>
+          <p className="eyebrow mt-8 text-bone/30">Est. 2008 · Ahmedabad — Mumbai — Surat — Vadodara</p>
         </div>
 
         <div className="lg:col-span-2">
@@ -145,7 +145,7 @@ export default function Footer() {
       <div className="flex flex-col items-start justify-between gap-4 px-[3vw] py-8 text-base uppercase tracking-[0.22em] text-bone/35 sm:flex-row sm:items-center">
         <p>© 2026 ModernArt Interior · All rooms reserved</p>
         <div className="flex items-center gap-4">
-          <span className="hidden sm:block">Photography — the atelier archive</span>
+          <span className="hidden sm:block">Photography — the studio archive</span>
           <button
             onClick={() => getLenis()?.scrollTo(0, { duration: 1.6 })}
             data-hover

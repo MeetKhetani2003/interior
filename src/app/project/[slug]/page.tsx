@@ -12,7 +12,7 @@ function VideoWalk({ p }: { p: Project }) {
       <div className="flex items-end justify-between">
         <Eyebrow>The walkthrough</Eyebrow>
         <Fade y={14}>
-          <span className="text-lg uppercase tracking-[0.24em] text-mink">02:14 — film by the atelier</span>
+          <span className="text-lg uppercase tracking-[0.24em] text-mink">02:14 — film by the studio</span>
         </Fade>
       </div>
       <Fade className="mt-10">
